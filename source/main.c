@@ -213,7 +213,7 @@ Result http_post(const char* url, const char* data) {
         ret = httpcSetKeepAlive(&context, HTTPC_KEEPALIVE_ENABLED);
         if (ret != 0) break;
 
-        ret = httpcAddRequestHeaderField(&context, "User-Agent", "aurorachat For Nintendo 3DS Systems (v6.0)");
+        ret = httpcAddRequestHeaderField(&context, "User-Agent", "chatterbox");
         if (ret != 0) break;
 
         ret = httpcAddRequestHeaderField(&context, "Content-Type", "text/plain");
@@ -838,7 +838,7 @@ int main() {
                     if (buf == NULL) {
                         http_post("http://104.236.25.60:6767/api/chat", sender);
                         if (buf == NULL) {
-                            show_error("The server did not respond, it could be offline.\nTry again later.\n\nAurorachat will now close.");
+                            show_error("The server did not respond, it could be offline.\nTry again later.\n\nchatterbox will now close.");
                             break;
                         }
                     }
@@ -925,7 +925,7 @@ int main() {
             C2D_SpriteSetScale(&bg, 2.5f, 1.0f);
             C2D_DrawSprite(&bg);
         
-            DrawText("aurorachat", 129, 10, 0, 1.2f, 1.2f, C2D_Color32(215, 228, 255, 255), false);
+            DrawText("chatterbox", 129, 10, 0, 1.2f, 1.2f, C2D_Color32(215, 228, 255, 255), false);
 
 
             C2D_SceneBegin(bottom);
@@ -983,7 +983,7 @@ int main() {
             C2D_SpriteSetScale(&bg, 2.5f, 1.0f);
             C2D_DrawSprite(&bg);
         
-            DrawText("aurorachat", 290, 2, 0, 0.8f, 0.8f, C2D_Color32(215, 228, 255, 255), false);
+            DrawText("chatterbox", 290, 2, 0, 0.8f, 0.8f, C2D_Color32(215, 228, 255, 255), false);
             DrawText("Rooms", 158, 5, 0, 1.1f, 1.1f, C2D_Color32(215, 228, 255, 255), false);
             DrawText("Move: ", 5, 200, 0, 0.6f, 0.6f, C2D_Color32(255, 255, 255, 150), false);
             DrawText("Select: ", 5, 220, 0, 0.6f, 0.6f, C2D_Color32(255, 255, 255, 150), false);
@@ -1036,7 +1036,7 @@ int main() {
                 msgY += 60;
             }
         
-            DrawText("aurorachat", 290, 2, 0, 0.8f, 0.8f, C2D_Color32(215, 228, 255, 255), false);
+            DrawText("chatterbox", 290, 2, 0, 0.8f, 0.8f, C2D_Color32(215, 228, 255, 255), false);
             DrawText("Move: ", 5, 180, 0, 0.6f, 0.6f, C2D_Color32(255, 255, 255, 150), false);
             DrawText("Leave: B", 5, 200, 0, 0.6f, 0.6f, C2D_Color32(255, 255, 255, 150), false);
             DrawText("Send a message: ", 5, 220, 0, 0.6f, 0.6f, C2D_Color32(255, 255, 255, 150), false);
@@ -1071,7 +1071,7 @@ int main() {
             C2D_SpriteSetScale(&bg, 2.5f, 1.0f);
             C2D_DrawSprite(&bg);
         
-            DrawText("aurorachat", 290, 2, 0, 0.8f, 0.8f, C2D_Color32(215, 228, 255, 255), false);
+            DrawText("chatterbox", 290, 2, 0, 0.8f, 0.8f, C2D_Color32(215, 228, 255, 255), false);
             DrawText("Account Setup", 110, 5, 0, 1.1f, 1.1f, C2D_Color32(215, 228, 255, 255), false);
             DrawText("Move: ", 5, 200, 0, 0.6f, 0.6f, C2D_Color32(255, 255, 255, 150), false);
             DrawText("Select: ", 5, 220, 0, 0.6f, 0.6f, C2D_Color32(255, 255, 255, 150), false);
@@ -1118,7 +1118,7 @@ int main() {
             C2D_SpriteSetScale(&bg, 2.5f, 1.0f);
             C2D_DrawSprite(&bg);
         
-            DrawText("aurorachat", 290, 2, 0, 0.8f, 0.8f, C2D_Color32(215, 228, 255, 255), false);
+            DrawText("chatterbox", 290, 2, 0, 0.8f, 0.8f, C2D_Color32(215, 228, 255, 255), false);
             DrawText("Create Account", 110, 5, 0, 1.1f, 1.1f, C2D_Color32(215, 228, 255, 255), false);
             DrawText("Move: ", 5, 200, 0, 0.6f, 0.6f, C2D_Color32(255, 255, 255, 150), false);
             DrawText("Select: ", 5, 220, 0, 0.6f, 0.6f, C2D_Color32(255, 255, 255, 150), false);
@@ -1143,7 +1143,7 @@ int main() {
                         if (buf == NULL) {
                             http_post("http://104.236.25.60:6767/api/signup", sender);
                             if (buf == NULL) {
-                                show_error("The server never responded.\nTry again later.\n\nAurorachat will now close.");
+                                show_error("The server never responded.\nTry again later.\n\nchatterbox will now close.");
                                 break;
                             }
                         }
@@ -1182,7 +1182,7 @@ int main() {
             C2D_SpriteSetScale(&bg, 2.5f, 1.0f);
             C2D_DrawSprite(&bg);
         
-            DrawText("aurorachat", 290, 2, 0, 0.8f, 0.8f, C2D_Color32(215, 228, 255, 255), false);
+            DrawText("chatterbox", 290, 2, 0, 0.8f, 0.8f, C2D_Color32(215, 228, 255, 255), false);
             DrawText("Logging In", 120, 5, 0, 1.1f, 1.1f, C2D_Color32(215, 228, 255, 255), false);
             DrawText("Move: ", 5, 200, 0, 0.6f, 0.6f, C2D_Color32(255, 255, 255, 150), false);
             DrawText("Select: ", 5, 220, 0, 0.6f, 0.6f, C2D_Color32(255, 255, 255, 150), false);
@@ -1207,7 +1207,7 @@ int main() {
                         if (buf == NULL) {
                             http_post("http://104.236.25.60:6767/api/login", sender);
                             if (buf == NULL) {
-                                show_error("The server never responded.\nTry again later.\n\nAurorachat will now close.");
+                                show_error("The server never responded.\nTry again later.\n\nchatterbox will now close.");
                                 break;
                             }
                         }
